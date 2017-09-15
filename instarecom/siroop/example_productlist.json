@@ -1,0 +1,565 @@
+// 20170915225653
+// https://api.siroop.ch/product/search/?query=lippenstift&limit=20&apikey=8ccd66bb1265472cbf8bed4458af4b07
+
+[
+  {
+    "description": "noch nicht erfasst",
+    "ean": "609332824683",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/06/cb/61/06cb61694bb44d33a61ebd93382dbddf.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/06/cb/61/06cb61694bb44d33a61ebd93382dbddf.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/06/cb/61/06cb61694bb44d33a61ebd93382dbddf.50x50.jpg"
+    },
+    "id": 2549673,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "2352205-A",
+    "name": "Lippenstift, Wine",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-wine-02352205",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "noch nicht erfasst",
+    "ean": "609332824690",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/44/78/26/4478261fec230adacd9becdcf5882da1.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/44/78/26/4478261fec230adacd9becdcf5882da1.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/44/78/26/4478261fec230adacd9becdcf5882da1.50x50.jpg"
+    },
+    "id": 2549638,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "2352206-A",
+    "name": "Lippenstift, Cranberry",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-cranberry-02352206",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "noch nicht erfasst",
+    "ean": "609332824676",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/f6/33/c4/f633c460c13fb0fd237efdbe223036ed.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/f6/33/c4/f633c460c13fb0fd237efdbe223036ed.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/f6/33/c4/f633c460c13fb0fd237efdbe223036ed.50x50.jpg"
+    },
+    "id": 2549693,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "2352203-A",
+    "name": "Lippenstift, Fuchsia",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-fuchsia-02352203",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Luana Lippenstift",
+    "ean": "7640113976583",
+    "price": 670,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/36/f6/3d/36f63d8c4851bc30c16cba88cc93fb9c.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/36/f6/3d/36f63d8c4851bc30c16cba88cc93fb9c.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/36/f6/3d/36f63d8c4851bc30c16cba88cc93fb9c.50x50.jpg"
+    },
+    "id": 1005547,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "17604-A",
+    "name": "Luana Lippenstift",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/luana-lippenstift-017604",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Luana"
+  },
+  {
+    "description": "Lippenstift, Cranberry",
+    "ean": "609332824720",
+    "price": 1690,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/f8/37/1e/f8371e7aef77565030e9cf49aaa82e76.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/f8/37/1e/f8371e7aef77565030e9cf49aaa82e76.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/f8/37/1e/f8371e7aef77565030e9cf49aaa82e76.50x50.jpg"
+    },
+    "id": 2173557,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1632580-A",
+    "name": "Lippenstift, Cranberry",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-cranberry-01632580",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Lippenstift, Wine",
+    "ean": "609332824703",
+    "price": 1690,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/e2/f0/9a/e2f09a461dc84ea82c13e4d0ba95925a.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/e2/f0/9a/e2f09a461dc84ea82c13e4d0ba95925a.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/e2/f0/9a/e2f09a461dc84ea82c13e4d0ba95925a.50x50.jpg"
+    },
+    "id": 2173645,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1632578-A",
+    "name": "Lippenstift, Wine",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-wine-01632578",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Lippenstift, Fuchsia",
+    "ean": "609332824686",
+    "price": 1690,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/31/4d/b8/314db8ae60beaa9a4cf3a1e10b6c6d0f.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/31/4d/b8/314db8ae60beaa9a4cf3a1e10b6c6d0f.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/31/4d/b8/314db8ae60beaa9a4cf3a1e10b6c6d0f.50x50.jpg"
+    },
+    "id": 2173621,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1632576-A",
+    "name": "Lippenstift, Fuchsia",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-fuchsia-01632576",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Lippenstift, Praline",
+    "ean": "609332824645",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/c9/4c/45/c94c45104abddd2bf9eea2684847e165.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/c9/4c/45/c94c45104abddd2bf9eea2684847e165.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/c9/4c/45/c94c45104abddd2bf9eea2684847e165.50x50.jpg"
+    },
+    "id": 2173595,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1632594-A",
+    "name": "Lippenstift, Praline",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-praline-01632594",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Lippenstift, Coral",
+    "ean": "609332824614",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/78/ab/92/78ab9221f6604dba7fcd27c0960055ca.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/78/ab/92/78ab9221f6604dba7fcd27c0960055ca.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/78/ab/92/78ab9221f6604dba7fcd27c0960055ca.50x50.jpg"
+    },
+    "id": 2173614,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1632568-A",
+    "name": "Lippenstift, Coral",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-coral-01632568",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Moisturizing Lippenstift",
+    "ean": "609332826403",
+    "price": 795,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/fc/fb/4e/fcfb4e4c1edd2c4beec3fdeedf3e0050.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/fc/fb/4e/fcfb4e4c1edd2c4beec3fdeedf3e0050.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/fc/fb/4e/fcfb4e4c1edd2c4beec3fdeedf3e0050.50x50.jpg"
+    },
+    "id": 2173705,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1632633-A",
+    "name": "Moisturizing Lippenstift",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/moisturizing-lippenstift-01632633",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Lippenstift, Natural",
+    "ean": "609332824621",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/38/e6/c0/38e6c00fd7c6f3c6a5e1738d0e728bbc.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/38/e6/c0/38e6c00fd7c6f3c6a5e1738d0e728bbc.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/38/e6/c0/38e6c00fd7c6f3c6a5e1738d0e728bbc.50x50.jpg"
+    },
+    "id": 2173873,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1633028-A",
+    "name": "Lippenstift, Natural",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-natural-01633028",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "<p>Der Rich Hydration Lipstick ist ein cremiger und feuchtigkeitsspendender Lippenstift mit Anti-Aging Wirkung.</p>",
+    "ean": "0080672091094",
+    "price": 1390,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/e1/6a/7c/e16a7c048daaa2046abe334b81a9e70c.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/e1/6a/7c/e16a7c048daaa2046abe334b81a9e70c.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/e1/6a/7c/e16a7c048daaa2046abe334b81a9e70c.50x50.jpg"
+    },
+    "id": 2049643,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1305370-A",
+    "name": "STUDIOMAKEUP Lippenstift - Rich Hydration",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/studiomakeup-lippenstift-rich-hydration-01305370",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Studiomakeup"
+  },
+  {
+    "description": "<p>Der Rich Hydration Lipstick ist ein cremiger und feuchtigkeitsspendender Lippenstift mit Anti-Aging Wirkung.</p>",
+    "ean": "0080672091056",
+    "price": 1390,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/f9/7d/f3/f97df31eb3c0fae686272279f26c05e9.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/f9/7d/f3/f97df31eb3c0fae686272279f26c05e9.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/f9/7d/f3/f97df31eb3c0fae686272279f26c05e9.50x50.jpg"
+    },
+    "id": 2049745,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1305474-A",
+    "name": "STUDIOMAKEUP Lippenstift - Rich Hydration",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/studiomakeup-lippenstift-rich-hydration-01305474",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Studiomakeup"
+  },
+  {
+    "description": "<ul><li>Feuchtigkeitsspendender Lippenstift mit intensiver Farbe und langem Tragekomfort</li><li>Mint-Vanille-Duft</li></ul>",
+    "ean": "0681619100314",
+    "price": 1850,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/83/68/85/836885738ed47ca69675748d29c57460.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/83/68/85/836885738ed47ca69675748d29c57460.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/83/68/85/836885738ed47ca69675748d29c57460.50x50.jpg"
+    },
+    "id": 2049869,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1305608-A",
+    "name": "theBalm Lippenstift - theBalm Girls Lipstick",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/thebalm-lippenstift-thebalm-girls-lipstick-01305608",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "theBalm"
+  },
+  {
+    "description": "noch nicht erfasst",
+    "ean": "609332824713",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/60/09/ac/6009acc0ffdac9b6e7017a025e9f444c.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/60/09/ac/6009acc0ffdac9b6e7017a025e9f444c.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/60/09/ac/6009acc0ffdac9b6e7017a025e9f444c.50x50.jpg"
+    },
+    "id": 2549639,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "2352207-A",
+    "name": "Lippenstift, Hot Commodity",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-hot-commodity-02352207",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "noch nicht erfasst",
+    "ean": "609332860131",
+    "price": 695,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/b1/e8/3c/b1e83cee2124ee9bb412f7376954b2c3.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/b1/e8/3c/b1e83cee2124ee9bb412f7376954b2c3.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/b1/e8/3c/b1e83cee2124ee9bb412f7376954b2c3.50x50.jpg"
+    },
+    "id": 2549785,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "2352243-A",
+    "name": "Lippenstift Gel Entferner",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/lippenstift-gel-entferner-02352243",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "e.l.f."
+  },
+  {
+    "description": "Luana Lippenstift Lippenstift Lila",
+    "ean": "7640113976644",
+    "price": 670,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/36/f6/3d/36f63d8c4851bc30c16cba88cc93fb9c.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/36/f6/3d/36f63d8c4851bc30c16cba88cc93fb9c.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/36/f6/3d/36f63d8c4851bc30c16cba88cc93fb9c.50x50.jpg"
+    },
+    "id": 1243955,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "394135-A",
+    "name": "Luana Lippenstift Lippenstift Lila",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/luana-lippenstift-lippenstift-lila-0394135",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Luana"
+  },
+  {
+    "description": "<p>Der Rich Hydration Lipstick ist ein cremiger und feuchtigkeitsspendender Lippenstift mit Anti-Aging Wirkung.</p>",
+    "ean": "0080672091117",
+    "price": 1390,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/3c/5b/f7/3c5bf7d709595395271bd3d3bcd868c7.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/3c/5b/f7/3c5bf7d709595395271bd3d3bcd868c7.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/3c/5b/f7/3c5bf7d709595395271bd3d3bcd868c7.50x50.jpg"
+    },
+    "id": 2049647,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1305374-A",
+    "name": "STUDIOMAKEUP Lippenstift - Rich Hydration",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/studiomakeup-lippenstift-rich-hydration-01305374",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Studiomakeup"
+  },
+  {
+    "description": "<p>Der Rich Hydration Lipstick ist ein cremiger und feuchtigkeitsspendender Lippenstift mit Anti-Aging Wirkung.</p>",
+    "ean": "0080672091223",
+    "price": 1390,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/85/42/e6/8542e6c1ad9b72aa06e0e16dc274b58a.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/85/42/e6/8542e6c1ad9b72aa06e0e16dc274b58a.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/85/42/e6/8542e6c1ad9b72aa06e0e16dc274b58a.50x50.jpg"
+    },
+    "id": 2049971,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1305696-A",
+    "name": "STUDIOMAKEUP Lippenstift - Rich Hydration",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/studiomakeup-lippenstift-rich-hydration-01305696",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Studiomakeup"
+  },
+  {
+    "description": "<p>Der Velour Lipstick ist ein matter, cremiger Lippenstift, der die Lippen nicht austrocknet und einen stundenlangen Tragekomfort bietet.</p>",
+    "ean": "0080672201073",
+    "price": 1490,
+    "images": {
+      "highres": "https://cdn.siroop.ch/media/images/sized/59/68/e2/5968e289894c152e0827423c7c922498.400x400.jpg",
+      "lowres": "https://cdn.siroop.ch/media/images/sized/59/68/e2/5968e289894c152e0827423c7c922498.200x200.jpg",
+      "thumbnails": "https://cdn.siroop.ch/media/images/sized/59/68/e2/5968e289894c152e0827423c7c922498.50x50.jpg"
+    },
+    "id": 2049986,
+    "categories": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "sku": "1305712-A",
+    "name": "STUDIOMAKEUP Velour Lippenstift",
+    "url": "/schoenheit-gesundheit/make-up-schminke/lippenstift/studiomakeup-velour-lippenstift-01305712",
+    "tags": [
+      "Lippenstift",
+      "Make-up & Schminke",
+      "Schönheit & Gesundheit"
+    ],
+    "l1_category_url": "/schoenheit-gesundheit",
+    "l2_category_url": "/schoenheit-gesundheit/make-up-schminke",
+    "l3_category_url": "/schoenheit-gesundheit/make-up-schminke/lippenstift",
+    "brand": "Studiomakeup"
+  }
+]
