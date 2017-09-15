@@ -9,11 +9,3 @@ def getproductlist(hashlist):
         for product in products:
             productlist.append(product)
     return productlist
-
-
-##################
-# Testcode
-
-hashlist = ['lippenstift', 'beauty', 'foodporn'];
-productlist = getproductlist(hashlist)
-print(productlist)
