@@ -1,1 +1,2 @@
-django
+django=1.11.5
+git+https://github.com/LevPasha/Instagram-API-python.git#egg=InstagramAPI
