@@ -36,6 +36,7 @@ def create_recommend(request):
         password = 'HackZurich2017'
         target = 'realdonaldtrump'
     req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
+    req.save()
     response = {
         'ticket': req.id
     }
