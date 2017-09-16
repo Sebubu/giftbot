@@ -45,9 +45,13 @@ def create_recommend(request):
     task.fetch_products(req.id)
     return JsonResponse(response, safe=False)
 
+
 @csrf_exempt
 def get_recommend(request):
-    req = RecommendRequest.objects.last()
+    if 'id' not in request.GET:
+        req = RecommendRequest.objects.last()
+    else:
+        req = RecommendRequest.objects.get(id=request.GET['id'])
     if not req.is_finished:
         return JsonResponse({'status': 'not_finished_yet'}, safe=False)
     product_list = json.loads(req.productList)
