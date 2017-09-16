@@ -132,3 +132,4 @@ huey_app = os.getenv('huey_app', 'production_app')
 
 pool = ConnectionPool.from_url('redis://h:p10cf360fa82c3d29ed628e6c444aedd5e3de604c9c9c42a221db3bc7643d6624@ec2-34-252-182-25.eu-west-1.compute.amazonaws.com:27659')
 HUEY = RedisHuey(huey_app, connection_pool=pool)
+print('huey app:', HUEY.name)

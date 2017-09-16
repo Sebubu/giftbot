@@ -2,7 +2,7 @@ from shopybot.settings import HUEY
 from .models import RecommendRequest
 import json
 
-print('huey app:', HUEY.name)
+
 
 
 def get_product_list(username, password, target_user):
