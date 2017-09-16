@@ -36,8 +36,9 @@ class InstaApi():
             raise Unauthorized('User login failed')
         self.api = api
 
-    def user_infos(self):
-        self.api.getSelfUsernameInfo()
+    def user_infos(self, username):
+        user_id = self._userid_lookup(username)
+        self.api.getUsernameInfo(user_id)
         info = {
             'fullName': self.api.LastJson['user']['full_name'],
             'profilePicUrl': self.api.LastJson['user']['profile_pic_url']
