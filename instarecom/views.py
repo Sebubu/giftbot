@@ -815,12 +815,30 @@ mock = [
     "brand": "Skip Hop"
   }
 ]
-def recommendations(request):
 
+def get_product_list(username, password, target_user):
+    from instarecom.instagram.hashscrapper import InstaApi
+    from instarecom.siroop.siroopapi import getproductlist
+    api = InstaApi()
+    api.login(username, password)
+    hashtags = api.get_hashtags(target_user)
+    products = getproductlist(hashtags)
+    return products
+
+@csrf_exempt
+def recommendations(request):
     if request.method == 'POST':
         anfrage = request.body.decode('unicode_escape')
         anfrage = json.loads(anfrage)
-        print('userName', anfrage['userName'])
-        print('password', anfrage['password'])
-        print('targetUser', anfrage['targetUser'])
+        username = anfrage['userName']
+        password = anfrage['password']
+        target = anfrage['targetUser']
+        username = 'severinbuhler'
+        password = 'HackZurich2017'
+        target = 'rebeka_gubser_10'
+        print('userName', username)
+        print('password', password)
+        print('targetUser', target)
+        products = get_product_list(username, password, target)
+        return JsonResponse(products, safe=False)
     return JsonResponse(mock, safe=False)

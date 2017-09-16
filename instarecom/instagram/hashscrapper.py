@@ -92,17 +92,9 @@ class InstaApi():
 
 
 
-user = 'severinbuhler'
-pw = 'HackZurich2017x'
-
-target = 'rebeka_gubser_10'
 
 
-api = InstaApi()
-api.login(user, pw)
-hashtags = api.get_hashtags(target)
-api.logout()
-print(hashtags)
+
 
 
 
