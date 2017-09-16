@@ -40,7 +40,7 @@ class InstaApi():
     def getTotalUserFeed(self, usernameId, minTimestamp = None):
         user_feed = []
         next_max_id = ''
-        while len(user_feed) < 20:
+        while len(user_feed) < 40:
             self.api.getUserFeed(usernameId, next_max_id, minTimestamp)
             temp = self.api.LastJson
             for item in temp["items"]:
@@ -56,7 +56,7 @@ class InstaApi():
             raise TargetUserNotFound()
         return users[0]['user']['pk']
 
-    def _get_medias(self, user_id, max_amount=20):
+    def _get_medias(self, user_id, max_amount=40):
         try:
             self.getTotalUserFeed(user_id)
         except KeyError:
