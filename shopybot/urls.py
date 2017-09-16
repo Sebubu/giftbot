@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from instarecom.views import recommendations
+from instarecom import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^recommend/$', recommendations),
+    url(r'^recommend/$', views.create_recommend),
+    url(r'^recommend/get$', views.get_recommend),
 ]

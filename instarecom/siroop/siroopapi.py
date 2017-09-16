@@ -17,7 +17,7 @@ def search(hashtag, limit):
 def getproductlist(hashlist):
     productlist = []
     for hash in hashlist[:4]:
-        products = search(hash, 1)
+        products = search(hash, 20)
         for product in products:
             productlist.append(product)
     return productlist

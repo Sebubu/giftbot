@@ -1,4 +1,5 @@
 from InstagramAPI import InstagramAPI
+import time
 
 
 class InstaException(Exception):
@@ -36,6 +37,18 @@ class InstaApi():
             raise Unauthorized('User login failed')
         self.api = api
 
+    def getTotalUserFeed(self, usernameId, minTimestamp = None):
+        user_feed = []
+        next_max_id = ''
+        while len(user_feed) < 20:
+            self.api.getUserFeed(usernameId, next_max_id, minTimestamp)
+            temp = self.api.LastJson
+            for item in temp["items"]:
+                user_feed.append(item)
+            if temp["more_available"] == False:
+                return user_feed
+            next_max_id = temp["next_max_id"]
+
     def _userid_lookup(self, username):
         self.api.fbUserSearch(username)
         users = self.api.LastJson['users']
@@ -45,7 +58,7 @@ class InstaApi():
 
     def _get_medias(self, user_id, max_amount=20):
         try:
-            self.api.getTotalUserFeed(user_id)
+            self.getTotalUserFeed(user_id)
         except KeyError:
             raise UserFeedIsPrivat()
         medias = self.api.LastJson['items']
@@ -77,6 +90,7 @@ class InstaApi():
         user_id = self._userid_lookup(username)
 
         medias = self._get_medias(user_id)
+        print(medias)
         if len(medias) == 0:
             raise NoMediaFound()
         hashtags = []

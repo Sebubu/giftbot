@@ -2,25 +2,19 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 from instarecom import task
+from .models import RecommendRequest
+import os
 
-import imageio
-imageio.plugins.ffmpeg.download()
+bs = os.getenv('my_os', 'linux')
+
+if bs == 'linux':
+    import imageio
+    imageio.plugins.ffmpeg.download()
 
 
-
-def get_product_list(username, password, target_user):
-    from instarecom.instagram.hashscrapper import InstaApi
-    from instarecom.siroop.siroopapi import getproductlist
-    api = InstaApi()
-    api.login(username, password)
-    hashtags = api.get_hashtags(target_user)
-    products = getproductlist(hashtags)
-    return products
 
 @csrf_exempt
-def recommendations(request):
-    task.test()
-    print('pushed huey task into redis')
+def create_recommend(request):
     if request.method == 'POST':
         anfrage = request.body.decode('unicode_escape')
         anfrage = json.loads(anfrage)
@@ -33,6 +27,22 @@ def recommendations(request):
     else:
         username = 'severinbuhler'
         password = 'HackZurich2017'
-        target = 'jenlikescats'
-    products = get_product_list(username, password, target)
-    return JsonResponse(products, safe=False)
+        target = 'realdonaldtrump'
+    req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
+    response = {
+        'ticket': req.id
+    }
+    task.fetch_products(req.id)
+    return JsonResponse(response, safe=False)
+
+@csrf_exempt
+def get_recommend(request):
+    req = RecommendRequest.objects.last()
+    if not req.is_finished:
+        return JsonResponse({'status': 'not_finished_yet'}, safe=False)
+    product_list = json.loads(req.productList)
+    content = {
+        'status': 'finished',
+        'result': product_list
+    }
+    return JsonResponse(content, safe=False)
