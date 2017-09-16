@@ -1,5 +1,4 @@
 from InstagramAPI import InstagramAPI
-import time
 
 
 class InstaException(Exception):
