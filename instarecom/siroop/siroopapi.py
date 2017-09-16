@@ -39,7 +39,7 @@ def remove_duplicates(productlist: []):
     products = {}
     for product in productlist:
         products[product['id']] = product
-    return products.values()
+    return list(products.values())
 
 
 
