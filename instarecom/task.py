@@ -43,6 +43,18 @@ def clean_hashtag_list(hashtags):
     return hashtag_list
 
 
+def improve_product_list(hashtags, productlist):
+    filtered_list = []
+    for product in productlist:
+        description = product['description'].lower()
+        for hashtag in hashtags:
+            if hashtag.lower() in description:
+                filtered_list.append(product)
+                break
+    return filtered_list
+
+
+
 def get_product_list(username, password, target_user):
     from instarecom.instagram.hashscrapper import InstaApi
     from instarecom.siroop.siroopapi import getproductlist
@@ -55,6 +67,10 @@ def get_product_list(username, password, target_user):
     hashtags = translate_hashtags(hashtags)
 
     products = getproductlist(hashtags)
+    print('Found', len(products), 'products')
+
+    products = improve_product_list(hashtags, products)
+    print('Filtered to', len(products), 'products')
     return products, caption
 
 
