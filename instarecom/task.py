@@ -51,23 +51,28 @@ def clean_hashtag_list(hashtags):
     hashtag_dict = {}
 
     for hashtag in hashtags:
-        for blacklist_item in blacklist:
-            if blacklist_item not in hashtag:
-                if hashtag in hashtag_dict:
-                    hashtag_dict[hashtag] = hashtag_dict[hashtag] + 1
-                else:
-                    hashtag_dict[hashtag] = 1
+        if hashtag in hashtag_dict:
+            hashtag_dict[hashtag] = hashtag_dict[hashtag] + 1
+        else:
+            hashtag_dict[hashtag] = 1
 
     sorted_hashtag_dict = sorted(hashtag_dict.items(), key=lambda x: x[1])
     sorted_hashtag_dict.reverse()
     print('Hashtag Dictionary: ', sorted_hashtag_dict)
 
-
-
-
     hashtag_list = []
+
     for hashtag_dict_item in sorted_hashtag_dict:
-        hashtag_list.append(hashtag_dict_item[0])
+        print(hashtag_dict_item)
+        item = hashtag_dict_item[0]
+        not_to_add = False
+
+        for blacklist_item in blacklist:
+            if blacklist_item in item:
+                not_to_add = True
+
+        if not_to_add == False:
+            hashtag_list.append(item)
 
     hashtag_arr_len = len(hashtag_list)
 
