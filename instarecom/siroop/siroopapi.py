@@ -10,7 +10,11 @@ def search(hashtag, limit):
     myssl = ssl.create_default_context()
     myssl.check_hostname = False
     myssl.verify_mode = ssl.CERT_NONE
-    data = urllib.request.urlopen(req,context=myssl).read()
+    try:
+        data = urllib.request.urlopen(req,context=myssl).read()
+    except Exception as ex:
+        print(ex)
+        raise ex
     products = json.loads(data.decode('utf-8'))
     return products
 

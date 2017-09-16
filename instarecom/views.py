@@ -32,9 +32,9 @@ def create_recommend(request):
         print('password', password)
         print('targetUser', target)
     else:
-        username = 'severinbuhler'
-        password = 'HackZurich2017'
-        target = 'realdonaldtrump'
+        username = 'marcel.amsler'
+        password = 'stupidfucker'
+        target = 'mstyp_ch'
     req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
     req.save()
     response = {
