@@ -15,7 +15,7 @@ def search(hashtag, limit):
     except Exception as ex:
         print('error hash', hashtag)
         print(ex)
-        raise ex
+        return []
     products = json.loads(data.decode('utf-8'))
     return products
 
