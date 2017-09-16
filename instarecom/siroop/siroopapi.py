@@ -15,6 +15,7 @@ def search(hashtag, limit):
 
 
 def getproductlist(hashlist, amount_products=60):
+    hashlist = list(set(hashlist))
     productlist = []
     products_per_hashtag = amount_products/len(hashlist[:10])
     for hash in hashlist:
