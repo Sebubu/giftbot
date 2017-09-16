@@ -10,9 +10,9 @@ def get_product_list(username, password, target_user):
     from instarecom.siroop.siroopapi import getproductlist
     api = InstaApi()
     api.login(username, password)
-    hashtags = api.get_hashtags(target_user)
+    hashtags, captions = api.get_hashtags(target_user)
     products = getproductlist(hashtags)
-    return products
+    return products, captions
 
 
 @HUEY.task()

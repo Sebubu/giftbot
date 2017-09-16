@@ -68,11 +68,12 @@ class InstaApi():
         hashtags = []
         media_id = media['pk']
         self.api.getMediaComments(str(media_id))
+        caption = ''
         if self.api.LastJson['caption'] is not None:
             caption = self.api.LastJson['caption']['text']
             new_hashtags = self._get_caption_hashtags(caption)
             hashtags += new_hashtags
-        return hashtags
+        return hashtags, caption
 
     def _get_caption_hashtags(self, caption:str):
         hashtags = []
@@ -94,11 +95,14 @@ class InstaApi():
         if len(medias) == 0:
             raise NoMediaFound()
         hashtags = []
+        captions = ''
         for media in medias:
-            hashtags += self._get_media_hashtags(media)
+            hts, caption = self._get_media_hashtags(media)
+            hashtags += hts
+            captions += caption
         if len(hashtags) == 0:
             raise NoHashTagsFound()
-        return hashtags
+        return hashtags, captions
 
     def logout(self):
         self.api.logout()
