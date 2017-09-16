@@ -57,7 +57,7 @@ def improve_product_list(hashtags, productlist):
     for key, value in rating.items():
         product, matches = value
         print(matches, product)
-        if matches >= 2:
+        if matches >= 1:
             filtered_list.append(product)
     return filtered_list
 
