@@ -34,24 +34,13 @@ def getproductlist(hashlist, amount_products=60):
     shuffle(productlist)
     return productlist
 
-def remove_duplicates(productlist: []):
-    ids = set()
-    for product in productlist:
-        ids.add(product['id'])
 
-    for id in ids:
-        i = 0
-        detected = False
-        while i < len(productlist) - 1:
-            product = productlist[i]
-            if id == product['id']:
-                if not detected:
-                    detected = True
-                else:
-                    del productlist[i]
-                    i -= 1
-            i+=1
-    return productlist
+def remove_duplicates(productlist: []):
+    products = {}
+    for product in productlist:
+        products[product['id']] = product
+    return products.values()
+
 
 
 
