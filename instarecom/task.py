@@ -84,7 +84,7 @@ def get_product_list(username, password, target_user):
     from instarecom.siroop.siroopapi import getproductlist
     api = InstaApi()
     api.login(username, password)
-    user_info = api.user_infos()
+    user_info = api.user_infos(target_user)
 
     hashtags, caption = api.get_hashtags(target_user)
     hashtags = clean_hashtag_list(hashtags)
