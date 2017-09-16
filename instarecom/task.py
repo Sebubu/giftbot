@@ -44,23 +44,37 @@ def clean_hashtag_list(hashtags):
 
 
 def improve_product_list(hashtags, productlist):
-    rating = {}
-    for product in productlist:
-        matches = 0
-        description = product['description'].lower()
-        for hashtag in hashtags:
-            if hashtag.lower() in description:
-                matches += 1
-                rating[str(product)] = (product, matches)
-
     filtered_list = []
-    for key, value in rating.items():
-        product, matches = value
-        print(matches, product)
-        if matches >= 1:
-            filtered_list.append(product)
+    for hash in hashtags:
+        best_product = get_best_for_hashtag(hash, hashtags, productlist)
+        filtered_list.append(best_product)
     return filtered_list
 
+
+def get_best_for_hashtag(hashtag, all_hashtags, productlist):
+    productlist = list(productlist)
+    filtered_products = []
+
+    for product in productlist:
+        if hashtag.lower() in product['description'].lower():
+            filtered_products.append(product)
+    if len(filtered_products) == 0:
+        return None
+
+    rating = []
+    for product in filtered_products:
+        count = 0
+        for hash in all_hashtags:
+            if hash.lower() in product['description'].lower():
+                count += 1
+        rating.append((count, product))
+
+    max_count, best_product = 0, None
+    for (count, product) in rating:
+        if count > max_count:
+            max_count = count
+            best_product = product
+    return best_product
 
 
 def get_product_list(username, password, target_user):
