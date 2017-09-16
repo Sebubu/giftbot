@@ -32,6 +32,7 @@ def getproductlist(hashlist, amount_products=60):
             productlist.append(product)
     productlist = remove_duplicates(productlist)
     shuffle(productlist)
+    print('Productlist: ', productlist)
     return productlist
 
 
