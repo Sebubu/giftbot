@@ -833,12 +833,13 @@ def recommendations(request):
         username = anfrage['userName']
         password = anfrage['password']
         target = anfrage['targetUser']
-        username = 'severinbuhler'
-        password = 'HackZurich2017'
-        target = 'rebeka_gubser_10'
         print('userName', username)
         print('password', password)
         print('targetUser', target)
-        products = get_product_list(username, password, target)
-        return JsonResponse(products, safe=False)
+    else:
+        username = 'severinbuhler'
+        password = 'HackZurich2017'
+        target = 'rebeka_gubser_10'
+    products = get_product_list(username, password, target)
+    return JsonResponse(products, safe=False)
     return JsonResponse(mock, safe=False)
