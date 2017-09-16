@@ -175,4 +175,4 @@ mock = [
 
 @csrf_exempt
 def recommendations(request):
-    return JsonResponse(mock)
+    return JsonResponse(mock, safe=False)
