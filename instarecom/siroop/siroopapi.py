@@ -1,6 +1,7 @@
 import urllib.request
 import json
 import ssl
+from random import shuffle
 
 
 def search(hashtag, limit):
@@ -14,7 +15,7 @@ def search(hashtag, limit):
         data = urllib.request.urlopen(req,context=myssl).read()
     except Exception as ex:
         print('error hash', hashtag)
-        print(ex)
+
         return []
     products = json.loads(data.decode('utf-8'))
     return products
@@ -22,12 +23,34 @@ def search(hashtag, limit):
 
 def getproductlist(hashlist, amount_products=60):
     hashlist = list(set(hashlist))
+    hashlist = hashlist[:20]
     productlist = []
-    products_per_hashtag = amount_products/len(hashlist[:10])
+    products_per_hashtag = amount_products/len(hashlist)
     for hash in hashlist:
         products = search(hash, products_per_hashtag)
         for product in products:
             productlist.append(product)
+    productlist = remove_duplicates(productlist)
+    shuffle(productlist)
+    return productlist
+
+def remove_duplicates(productlist: []):
+    ids = set()
+    for product in productlist:
+        ids.add(product['id'])
+
+    for id in ids:
+        i = 0
+        detected = False
+        while i < len(productlist) - 1:
+            product = productlist[i]
+            if id == product['id']:
+                if not detected:
+                    detected = True
+                else:
+                    del productlist[i]
+                    i -= 1
+            i+=1
     return productlist
 
 
