@@ -47,6 +47,7 @@ class InstaApi():
             if temp["more_available"] == False:
                 return user_feed
             next_max_id = temp["next_max_id"]
+        return user_feed
 
     def _userid_lookup(self, username):
         self.api.fbUserSearch(username)

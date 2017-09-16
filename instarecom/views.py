@@ -36,7 +36,7 @@ def create_recommend(request):
     if request.method == 'GET':
         username = 'marcel.amsler'
         password = 'stupidfucker'
-        target = 'severinbuhler'
+        target = 'chucknorris'
 
     req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
     req.save()
@@ -81,7 +81,7 @@ def personality(request):
     else:
         username = 'severinbuhler'
         password = 'HackZurich2017'
-        target = 'jenlikescats'
+        target = 'chucknorris'
 
     personality = get_personality(username, password, target)
     return JsonResponse(personality, safe=False)
