@@ -23,7 +23,9 @@ def getproductlist(hashlist, amount_products=60):
         products = search(hash, products_per_hashtag)
         for product in products:
             productlist.append(product)
+    print('Productlist: ', productlist)
     return productlist
+
 
 
 

@@ -5,15 +5,39 @@ import json
 
 
 
+def clean_hashtag_list(hashtags):
+
+    hashtag_dict = {}
+
+    for hashtag in hashtags:
+        if "insta" not in hashtag:
+            if hashtag in hashtag_dict:
+                hashtag_dict[hashtag] = hashtag_dict[hashtag] + 1
+            else:
+                hashtag_dict[hashtag] = 1
+
+    sorted_hashtag_dict = sorted(hashtag_dict.items(), key=lambda x: x[1])
+    sorted_hashtag_dict.reverse()
+    print('Hashtag Dictionary: ', sorted_hashtag_dict)
+
+    hashtag_list = []
+    for hashtag_dict_item in sorted_hashtag_dict:
+        hashtag_list.append(hashtag_dict_item[0])
+
+    return hashtag_list
+
 
 def get_product_list(username, password, target_user):
     from instarecom.instagram.hashscrapper import InstaApi
     from instarecom.siroop.siroopapi import getproductlist
     api = InstaApi()
     api.login(username, password)
-    hashtags, captions = api.get_hashtags(target_user)
+
+    hashtags, caption = api.get_hashtags(target_user)
+    hashtags = clean_hashtag_list(hashtags)
+
     products = getproductlist(hashtags)
-    return products, captions
+    return products
 
 
 def getPersonality(captions):
