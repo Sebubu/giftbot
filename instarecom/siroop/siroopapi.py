@@ -25,11 +25,11 @@ def search(hashtag, limit):
 
 def getproductlist(hashlist, amount_products=60):
     hashlist = list(set(hashlist))
-    hashlist = hashlist[:50]
+    hashlist = hashlist[:100]
     print(len(hashlist), 'hashes found')
     productlist = []
 
-    products_per_hashtag = 10
+    products_per_hashtag = 50
     for hash in hashlist:
         products = search(hash, products_per_hashtag)
         if len(products) == 0:
