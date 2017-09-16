@@ -5,6 +5,7 @@ import ssl
 
 def search(hashtag, limit):
     url = 'https://api.siroop.ch/product/search/?query=' + hashtag + '&limit=' + str(int(limit)) + '&apikey=8ccd66bb1265472cbf8bed4458af4b07'
+    print(url)
     req = urllib.request.Request(url)
     myssl = ssl.create_default_context()
     myssl.check_hostname = False
