@@ -22,6 +22,8 @@ def get_personality(username, password, target_user):
 
 @csrf_exempt
 def create_recommend(request):
+    if not (request.method == 'POST' or request.method == 'GET'):
+        return JsonResponse({}, safe=False)
     if request.method == 'POST':
         anfrage = request.body.decode('unicode_escape')
         anfrage = json.loads(anfrage)
@@ -31,10 +33,11 @@ def create_recommend(request):
         print('userName', username)
         print('password', password)
         print('targetUser', target)
-    else:
+    if request.method == 'GET':
         username = 'marcel.amsler'
         password = 'stupidfucker'
         target = 'mstyp_ch'
+
     req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
     req.save()
     response = {
