@@ -2,7 +2,6 @@ from shopybot.settings import HUEY
 from instarecom.personality.personalityapi import PersonalityApi
 from .models import RecommendRequest
 import json
-import string
 
 from watson_developer_cloud import LanguageTranslatorV2
 
@@ -54,7 +53,6 @@ def get_product_list(username, password, target_user):
     hashtags = clean_hashtag_list(hashtags)
 
     hashtags = translate_hashtags(hashtags)
-
 
     products = getproductlist(hashtags)
     return products, caption
