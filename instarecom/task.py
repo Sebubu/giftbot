@@ -27,9 +27,6 @@ def fetch_products(request_id):
     liste, captions = get_product_list(req.username, req.password, req.targetUser)
     print(len(liste), 'products found')
     req.productList = json.dumps(liste)
-    print(req.productList)
-
     req.personality = getPersonality(captions)
-    print(req.personality)
 
     req.save()
