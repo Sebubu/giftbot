@@ -3,10 +3,26 @@ from instarecom.personality.personalityapi import PersonalityApi
 from .models import RecommendRequest
 import json
 
+from watson_developer_cloud import LanguageTranslatorV2
+
+
+def translate_hashtags(hashtags):
+    language_translator = LanguageTranslatorV2(
+        url='https://gateway-fra.watsonplatform.net/language-translator/api',
+        username='241712b3-9910-4b73-8441-682c3c911e04',
+        password='kiwGx5ElNpzP'
+    )
+
+    german_tags = []
+    for hashtag in hashtags:
+        raw_german_str = json.dumps(language_translator.translate(hashtag, source='en', target='de'), indent=2, ensure_ascii=False)
+        german_str = raw_german_str.replace('\"', '')
+        german_tags.append(german_str)
+
+    return german_tags
 
 
 def clean_hashtag_list(hashtags):
-
     hashtag_dict = {}
 
     for hashtag in hashtags:
@@ -36,6 +52,8 @@ def get_product_list(username, password, target_user):
     hashtags, caption = api.get_hashtags(target_user)
     hashtags = clean_hashtag_list(hashtags)
 
+    hashtags = translate_hashtags(hashtags)
+
     products = getproductlist(hashtags)
     return products, caption
 
@@ -43,6 +61,7 @@ def get_product_list(username, password, target_user):
 def getPersonality(captions):
     api = PersonalityApi()
     return api.get_personality(captions)
+
 
 @HUEY.task()
 def fetch_products(request_id):
