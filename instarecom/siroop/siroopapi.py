@@ -13,6 +13,7 @@ def search(hashtag, limit):
     try:
         data = urllib.request.urlopen(req,context=myssl).read()
     except Exception as ex:
+        print('error hash', hashtag)
         print(ex)
         raise ex
     products = json.loads(data.decode('utf-8'))
