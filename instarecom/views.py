@@ -5,12 +5,22 @@ from instarecom import task
 from .models import RecommendRequest
 import os
 
+
 bs = os.getenv('my_os', 'linux')
 
 if bs == 'linux':
     import imageio
     imageio.plugins.ffmpeg.download()
 
+
+
+
+
+def get_personality(username, password, target_user):
+    from instarecom.personality import personalityapi
+
+    personality = personalityapi.PersonalityApi()
+    return personality.get_personality()
 
 
 @csrf_exempt
@@ -46,3 +56,26 @@ def get_recommend(request):
         'result': product_list
     }
     return JsonResponse(content, safe=False)
+
+
+
+@csrf_exempt
+def personality(request):
+    if request.method == 'POST':
+        anfrage = request.body.decode('unicode_escape')
+        anfrage = json.loads(anfrage)
+        username = anfrage['userName']
+        password = anfrage['password']
+        target = anfrage['targetUser']
+        print('userName', username)
+        print('password', password)
+        print('targetUser', target)
+
+    else:
+        username = 'severinbuhler'
+        password = 'HackZurich2017'
+        target = 'jenlikescats'
+
+    personality = get_personality(username, password, target)
+    return JsonResponse(personality, safe=False)
+

@@ -21,4 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^recommend/$', views.create_recommend),
     url(r'^recommend/get$', views.get_recommend),
+
+    url(r'^personality/$', views.personality)
+
 ]

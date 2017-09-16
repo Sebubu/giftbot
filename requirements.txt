@@ -3,3 +3,4 @@ git+https://github.com/LevPasha/Instagram-API-python.git#egg=InstagramAPI
 gunicorn==19.7.1
 redis
 huey
+watson-developer-cloud
