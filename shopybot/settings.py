@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'huey.contrib.djhuey',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,12 @@ STATIC_URL = '/static/'
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+from huey import RedisHuey
+from redis import ConnectionPool
+
+host = ''
+port = ''
+
+pool = ConnectionPool.from_url('redis://h:p10cf360fa82c3d29ed628e6c444aedd5e3de604c9c9c42a221db3bc7643d6624@ec2-34-252-182-25.eu-west-1.compute.amazonaws.com:27659')
+HUEY = RedisHuey('my-app', connection_pool=pool)

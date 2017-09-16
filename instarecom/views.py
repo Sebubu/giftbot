@@ -1,10 +1,11 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-
+from instarecom import task
 
 import imageio
 imageio.plugins.ffmpeg.download()
+
 
 
 def get_product_list(username, password, target_user):
@@ -18,6 +19,7 @@ def get_product_list(username, password, target_user):
 
 @csrf_exempt
 def recommendations(request):
+    task.test()
     if request.method == 'POST':
         anfrage = request.body.decode('unicode_escape')
         anfrage = json.loads(anfrage)
