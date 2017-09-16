@@ -44,13 +44,21 @@ def clean_hashtag_list(hashtags):
 
 
 def improve_product_list(hashtags, productlist):
-    filtered_list = []
+    rating = {}
     for product in productlist:
+        matches = 0
         description = product['description'].lower()
         for hashtag in hashtags:
             if hashtag.lower() in description:
-                filtered_list.append(product)
-                break
+                matches += 1
+                rating[str(product)] = (product, matches)
+
+    filtered_list = []
+    for key, value in rating.items():
+        product, matches = value
+        print(matches, product)
+        if matches >= 2:
+            filtered_list.append(product)
     return filtered_list
 
 
