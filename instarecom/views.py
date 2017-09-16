@@ -8,9 +8,9 @@ import os
 
 bs = os.getenv('my_os', 'linux')
 
-if bs == 'linux':
-    import imageio
-    imageio.plugins.ffmpeg.download()
+# if bs == 'linux':
+#     import imageio
+#     imageio.plugins.ffmpeg.download()
 
 
 def get_personality(username, password, target_user):
@@ -53,9 +53,11 @@ def get_recommend(request):
     if not req.is_finished:
         return JsonResponse({'status': 'not_finished_yet'}, safe=False)
     product_list = json.loads(req.productList)
+    personality = json.loads(req.personality)
     content = {
         'status': 'finished',
-        'result': product_list
+        'result': product_list,
+        'personality_result': personality
     }
     return JsonResponse(content, safe=False)
 

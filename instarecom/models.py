@@ -6,7 +6,7 @@ class RecommendRequest(models.Model):
     password = models.CharField(max_length=50)
     targetUser = models.CharField(max_length=50)
     productList = models.TextField()
-    personality = models.TextField()
+    personality = models.TextField(default='')
 
     @property
     def is_finished(self):

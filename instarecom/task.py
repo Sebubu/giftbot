@@ -1,4 +1,5 @@
 from shopybot.settings import HUEY
+from instarecom.personality.personalityapi import PersonalityApi
 from .models import RecommendRequest
 import json
 
@@ -15,15 +16,20 @@ def get_product_list(username, password, target_user):
     return products, captions
 
 
+def getPersonality(captions):
+    api = PersonalityApi()
+    return api.get_personality(captions)
+
 @HUEY.task()
 def fetch_products(request_id):
-    print('proccess', request_id)
-    ids = RecommendRequest.objects.all().values_list('id', flat=True)
-    print(list(ids))
     req = RecommendRequest.objects.get(id=int(request_id))
     print('fetch for', req.targetUser)
-    liste = get_product_list(req.username, req.password, req.targetUser)
+    liste, captions = get_product_list(req.username, req.password, req.targetUser)
     print(len(liste), 'products found')
     req.productList = json.dumps(liste)
     print(req.productList)
+
+    req.personality = getPersonality(captions)
+    print(req.personality)
+
     req.save()
