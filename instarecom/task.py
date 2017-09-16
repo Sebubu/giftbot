@@ -117,12 +117,12 @@ def get_product_list(username, password, target_user):
     api.login(username, password)
     user_info = api.user_infos(target_user)
 
-    hashtags, caption = api.get_hashtags(target_user)
+    hashtags, base_caption = api.get_hashtags(target_user)
     hashtags = clean_hashtag_list(hashtags)
 
     hashtags = translate_hashtags(hashtags)
 
-    caption_list = nlp_captions(caption)
+    caption_list = nlp_captions(base_caption)
     caption_list = translate_hashtags(caption_list)
 
     for caption in caption_list:
@@ -137,7 +137,7 @@ def get_product_list(username, password, target_user):
 
     #products = improve_product_list(hashtags, products)
     print('Filtered to', len(products), 'products')
-    return products, caption, user_info
+    return products, base_caption, user_info
 
 
 def getPersonality(captions):
