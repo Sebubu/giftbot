@@ -30,6 +30,6 @@ def recommendations(request):
     else:
         username = 'severinbuhler'
         password = 'HackZurich2017'
-        target = 'rebeka_gubser_10'
+        target = 'jenlikescats'
     products = get_product_list(username, password, target)
     return JsonResponse(products, safe=False)
