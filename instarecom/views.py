@@ -20,6 +20,7 @@ def get_product_list(username, password, target_user):
 @csrf_exempt
 def recommendations(request):
     task.test()
+    print('pushed huey task into redis')
     if request.method == 'POST':
         anfrage = request.body.decode('unicode_escape')
         anfrage = json.loads(anfrage)
