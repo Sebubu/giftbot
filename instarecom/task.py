@@ -84,6 +84,7 @@ def get_product_list(username, password, target_user):
     from instarecom.siroop.siroopapi import getproductlist
     api = InstaApi()
     api.login(username, password)
+    user_info = api.user_infos()
 
     hashtags, caption = api.get_hashtags(target_user)
     hashtags = clean_hashtag_list(hashtags)
@@ -95,7 +96,7 @@ def get_product_list(username, password, target_user):
 
     #products = improve_product_list(hashtags, products)
     print('Filtered to', len(products), 'products')
-    return products, caption
+    return products, caption, user_info
 
 
 def getPersonality(captions):
@@ -107,9 +108,9 @@ def getPersonality(captions):
 def fetch_products(request_id):
     req = RecommendRequest.objects.get(id=int(request_id))
     print('fetch for', req.targetUser)
-    liste, captions = get_product_list(req.username, req.password, req.targetUser)
+    liste, captions, user_info = get_product_list(req.username, req.password, req.targetUser)
     print(len(liste), 'products found')
     req.productList = json.dumps(liste)
     req.personality = getPersonality(captions)
-
+    req.user_info = json.dumps(user_info)
     req.save()

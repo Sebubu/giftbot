@@ -27,8 +27,8 @@ def create_recommend(request):
     if request.method == 'POST':
         anfrage = request.body.decode('unicode_escape')
         anfrage = json.loads(anfrage)
-        username = anfrage['userName']
-        password = anfrage['password']
+        username = 'marcel.amsler'
+        password = 'stupidfucker'
         target = anfrage['targetUser']
         print('userName', username)
         print('password', password)
@@ -36,7 +36,7 @@ def create_recommend(request):
     if request.method == 'GET':
         username = 'marcel.amsler'
         password = 'stupidfucker'
-        target = 'chucknorris'
+        target = 'mstyp_ch'
 
     req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
     req.save()
@@ -57,10 +57,12 @@ def get_recommend(request):
         return JsonResponse({'status': 'not_finished_yet'}, safe=False)
     product_list = json.loads(req.productList)
     personality = json.loads(req.personality)
+    user_info = json.loads(req.user_info)
     content = {
         'status': 'finished',
         'result': product_list,
-        'personality_result': personality
+        'personality_result': personality,
+        'userInfo': user_info
     }
     return JsonResponse(content, safe=False)
 
