@@ -58,11 +58,10 @@ class InstaApi():
 
     def _get_medias(self, user_id, max_amount=40):
         try:
-            self.getTotalUserFeed(user_id)
+            medias = self.getTotalUserFeed(user_id)
+            return medias[:max_amount]
         except KeyError:
             raise UserFeedIsPrivat()
-        medias = self.api.LastJson['items']
-        return medias[:max_amount]
 
     def _get_media_hashtags(self, media):
         hashtags = []
@@ -99,7 +98,7 @@ class InstaApi():
         for media in medias:
             hts, caption = self._get_media_hashtags(media)
             hashtags += hts
-            captions += caption
+            captions += ' ' + str(caption)
         if len(hashtags) == 0:
             raise NoHashTagsFound()
         return hashtags, captions

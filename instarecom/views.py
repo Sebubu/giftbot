@@ -36,7 +36,7 @@ def create_recommend(request):
     if request.method == 'GET':
         username = 'marcel.amsler'
         password = 'stupidfucker'
-        target = 'mstyp_ch'
+        target = 'severinbuhler'
 
     req = RecommendRequest.objects.create(username=username, password=password, targetUser=target)
     req.save()
