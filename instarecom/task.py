@@ -53,6 +53,7 @@ def improve_product_list(hashtags, productlist):
 
 
 def get_best_for_hashtag(hashtag, all_hashtags, productlist):
+    print(len(productlist))
     productlist = list(productlist)
     filtered_products = []
 
@@ -92,7 +93,7 @@ def get_product_list(username, password, target_user):
     products = getproductlist(hashtags)
     print('Found', len(products), 'products')
 
-    products = improve_product_list(hashtags, products)
+    #products = improve_product_list(hashtags, products)
     print('Filtered to', len(products), 'products')
     return products, caption
 
