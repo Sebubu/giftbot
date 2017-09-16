@@ -37,7 +37,7 @@ def get_product_list(username, password, target_user):
     hashtags = clean_hashtag_list(hashtags)
 
     products = getproductlist(hashtags)
-    return products
+    return products, caption
 
 
 def getPersonality(captions):
