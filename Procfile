@@ -1,2 +1,2 @@
-hueyworker: python manage.py run_huey
+worker: python manage.py run_huey
 web: gunicorn shopybot.wsgi --log-file - --timeout 1000
