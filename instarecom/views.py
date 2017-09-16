@@ -13,9 +13,6 @@ if bs == 'linux':
     imageio.plugins.ffmpeg.download()
 
 
-
-
-
 def get_personality(username, password, target_user):
     from instarecom.personality import personalityapi
 
