@@ -23,7 +23,7 @@ def search(hashtag, limit):
 
 def getproductlist(hashlist, amount_products=60):
     hashlist = list(set(hashlist))
-    hashlist = hashlist[:20]
+    hashlist = hashlist[:50]
     productlist = []
     products_per_hashtag = amount_products/len(hashlist)
     for hash in hashlist:

@@ -46,14 +46,6 @@ def getPersonality(captions):
 
 @HUEY.task()
 def fetch_products(request_id):
-    futures = []
-    for i in range(0,5):
-        fu = test_return()
-        futures.append(fu)
-    x = 0
-    for fu in futures:
-        x += fu(blocking=True)
-    print(x)
     req = RecommendRequest.objects.get(id=int(request_id))
     print('fetch for', req.targetUser)
     liste, captions = get_product_list(req.username, req.password, req.targetUser)
@@ -62,8 +54,3 @@ def fetch_products(request_id):
     req.personality = getPersonality(captions)
 
     req.save()
-
-
-@HUEY.task()
-def test_return():
-    return 1
