@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'shopybot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dfkfdke37d8vk0',
+        'USER': 'jyfbtpswkskjjq',
+        'PASSWORD': 'da5b11ba4b735366423d37ae6abedb21fc67af47f6a13faf164523f9a0ef6dea',
+        'HOST': 'ec2-54-247-99-159.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -132,3 +136,4 @@ huey_app = os.getenv('huey_app', 'production_app')
 
 pool = ConnectionPool.from_url('redis://h:p10cf360fa82c3d29ed628e6c444aedd5e3de604c9c9c42a221db3bc7643d6624@ec2-34-252-182-25.eu-west-1.compute.amazonaws.com:27659')
 HUEY = RedisHuey(huey_app, connection_pool=pool)
+print('huey app:', HUEY.name)
