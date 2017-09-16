@@ -175,9 +175,10 @@ mock = [
 
 @csrf_exempt
 def recommendations(request):
-    anfrage = request.body.decode('unicode_escape')
-    anfrage = json.loads(anfrage)
-    print('userName', anfrage['userName'])
-    print('password', anfrage['password'])
-    print('targetUser', anfrage['targetUser'])
+    if request.method == 'POST':
+        anfrage = request.body.decode('unicode_escape')
+        anfrage = json.loads(anfrage)
+        print('userName', anfrage['userName'])
+        print('password', anfrage['password'])
+        print('targetUser', anfrage['targetUser'])
     return JsonResponse(mock, safe=False)
