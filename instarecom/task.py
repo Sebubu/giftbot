@@ -2,8 +2,31 @@ from shopybot.settings import HUEY
 from instarecom.personality.personalityapi import PersonalityApi
 from .models import RecommendRequest
 import json
+import random
 
 from watson_developer_cloud import LanguageTranslatorV2
+from watson_developer_cloud import NaturalLanguageUnderstandingV1
+import watson_developer_cloud.natural_language_understanding.features.v1 as features
+
+
+def nlp_captions(captions):
+    nlp = NaturalLanguageUnderstandingV1(
+        version='2017-02-27',
+        url='https://gateway.watsonplatform.net/natural-language-understanding/api',
+        username='7972a32c-8fb3-45be-b9ce-2a4364d13914',
+        password='hFUSreGR5MXf'
+    )
+
+    nlp_result = nlp.analyze(text = captions, features=[features.Categories()])
+    cat_return_list = []
+    for entry in nlp_result['categories']:
+        category = entry['label']
+        categories = category.split('/')
+        for category_item in categories:
+            if not category_item == '':
+                cat_return_list.append(category_item)
+
+    return cat_return_list
 
 
 def translate_hashtags(hashtags):
@@ -23,24 +46,32 @@ def translate_hashtags(hashtags):
 
 
 def clean_hashtag_list(hashtags):
+
+    blacklist = ['insta', 'bestof', 'oftheday', 'igdaily', '_', 'pic']
     hashtag_dict = {}
 
     for hashtag in hashtags:
-        if "insta" not in hashtag:
-            if hashtag in hashtag_dict:
-                hashtag_dict[hashtag] = hashtag_dict[hashtag] + 1
-            else:
-                hashtag_dict[hashtag] = 1
+        for blacklist_item in blacklist:
+            if blacklist_item not in hashtag:
+                if hashtag in hashtag_dict:
+                    hashtag_dict[hashtag] = hashtag_dict[hashtag] + 1
+                else:
+                    hashtag_dict[hashtag] = 1
 
     sorted_hashtag_dict = sorted(hashtag_dict.items(), key=lambda x: x[1])
     sorted_hashtag_dict.reverse()
     print('Hashtag Dictionary: ', sorted_hashtag_dict)
 
+
+
+
     hashtag_list = []
     for hashtag_dict_item in sorted_hashtag_dict:
         hashtag_list.append(hashtag_dict_item[0])
 
-    return hashtag_list
+    hashtag_arr_len = len(hashtag_list)
+
+    return hashtag_list[0:int(0.75*hashtag_arr_len)]
 
 
 def improve_product_list(hashtags, productlist):
@@ -90,6 +121,16 @@ def get_product_list(username, password, target_user):
     hashtags = clean_hashtag_list(hashtags)
 
     hashtags = translate_hashtags(hashtags)
+
+    caption_list = nlp_captions(caption)
+    caption_list = translate_hashtags(caption_list)
+
+    for caption in caption_list:
+        hashtags.append(caption)
+
+    print("size of hashtags: ", len(hashtags))
+
+    random.shuffle(hashtags)
 
     products = getproductlist(hashtags)
     print('Found', len(products), 'products')
