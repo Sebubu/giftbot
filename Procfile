@@ -1,1 +1,1 @@
-web: gunicorn shopybot.wsgi --log-file -
+web: gunicorn shopybot.wsgi --log-file - --timeout 1000
