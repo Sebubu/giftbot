@@ -18,6 +18,8 @@ def get_product_list(username, password, target_user):
 @HUEY.task()
 def fetch_products(request_id):
     print('proccess', request_id)
+    ids = RecommendRequest.objects.all().values_list('id', flat=True)
+    print(ids)
     req = RecommendRequest.objects.get(id=int(request_id))
     print('fetch for', req.targetUser)
     liste = get_product_list(req.username, req.password, req.targetUser)
