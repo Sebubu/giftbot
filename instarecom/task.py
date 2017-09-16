@@ -47,7 +47,8 @@ def improve_product_list(hashtags, productlist):
     filtered_list = []
     for hash in hashtags:
         best_product = get_best_for_hashtag(hash, hashtags, productlist)
-        filtered_list.append(best_product)
+        if best_product is not None:
+            filtered_list.append(best_product)
     return filtered_list
 
 
