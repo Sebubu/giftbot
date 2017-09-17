@@ -5,13 +5,14 @@ from random import shuffle
 
 
 def search(hashtag, limit):
-    url = 'https://api.siroop.ch/product/search/?query=' + hashtag + '&limit=' + str(int(limit)) + '&apikey=8ccd66bb1265472cbf8bed4458af4b07'
+    url = 'https://api.siroop.ch/product/search/?query=' + hashtag + '&limit=' + str(
+        int(limit)) + '&apikey=8ccd66bb1265472cbf8bed4458af4b07'
     req = urllib.request.Request(url)
     myssl = ssl.create_default_context()
     myssl.check_hostname = False
     myssl.verify_mode = ssl.CERT_NONE
     try:
-        data = urllib.request.urlopen(req,context=myssl).read()
+        data = urllib.request.urlopen(req, context=myssl).read()
     except Exception as ex:
         try:
             data = urllib.request.urlopen(req, context=myssl).read()
@@ -20,23 +21,27 @@ def search(hashtag, limit):
             return []
     products = json.loads(data.decode('utf-8'))
     print(hashtag, len(products))
+
     return products
 
 
-def getproductlist(hashlist, amount_products=60):
+def getproductlist(hashlist, captionlist, amount_products=60):
     hashlist = list(set(hashlist))
     hashlist = hashlist[:100]
     print(len(hashlist), 'hashes found')
     productlist = []
 
-    products_per_hashtag = 50
-    for hash in hashlist:
-        products = search(hash, products_per_hashtag)
-        if len(products) == 0:
-            continue
-        best_product = get_best_for_hashtag(hash, hashlist,products)
-        productlist.append(best_product)
+    products_per_hashtag = 1000
+    for caption in captionlist:
+        products = search(caption, products_per_hashtag)
+
+        if isinstance(products, list) and len(products) > 0:
+            best_products = get_best_for_hashtag(caption, hashlist, products)
+            for best_product in best_products:
+                productlist.append(best_product)
+
     print(len(productlist), 'found')
+
     productlist = remove_duplicates(productlist)
     print(len(productlist), 'after duplicate removing')
     shuffle(productlist)
@@ -44,15 +49,12 @@ def getproductlist(hashlist, amount_products=60):
 
 
 def get_best_for_hashtag(hashtag, all_hashtags, productlist):
-    print(len(productlist))
     productlist = list(productlist)
     filtered_products = []
 
     for product in productlist:
         if hashtag.lower() in product['description'].lower():
             filtered_products.append(product)
-    if len(filtered_products) == 0:
-        return productlist[0]
 
     rating = []
     for product in filtered_products:
@@ -62,20 +64,23 @@ def get_best_for_hashtag(hashtag, all_hashtags, productlist):
                 count += 1
         rating.append((count, product))
 
-    max_count, best_product = 0, None
-    for (count, product) in rating:
-        if count > max_count:
-            max_count = count
-            best_product = product
-    return best_product
+    sorted_rating_list = sorted(rating, key=lambda x: x[0])
+
+    best_products = []
+    for (count, product) in sorted_rating_list:
+        if count > 0:
+            best_products.append(product)
+
+    if len(best_products) > 3:
+        return best_products[0:3]
+    return best_products
 
 
 def remove_duplicates(productlist: []):
     products = {}
     for product in productlist:
-        products[product['id']] = product
+        if product:
+            id = product['id']
+            products[id] = product
+
     return list(products.values())
-
-
-
-

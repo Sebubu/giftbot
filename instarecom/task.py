@@ -21,6 +21,8 @@ def nlp_captions(captions):
     cat_return_list = []
     for entry in nlp_result['categories']:
         category = entry['label']
+        print(category)
+        category = category.replace(' and ', '/')
         categories = category.split('/')
         for category_item in categories:
             if not category_item == '':
@@ -88,32 +90,6 @@ def improve_product_list(hashtags, productlist):
     return filtered_list
 
 
-def get_best_for_hashtag(hashtag, all_hashtags, productlist):
-    print(len(productlist))
-    productlist = list(productlist)
-    filtered_products = []
-
-    for product in productlist:
-        if hashtag.lower() in product['description'].lower():
-            filtered_products.append(product)
-    if len(filtered_products) == 0:
-        return None
-
-    rating = []
-    for product in filtered_products:
-        count = 0
-        for hash in all_hashtags:
-            if hash.lower() in product['description'].lower():
-                count += 1
-        rating.append((count, product))
-
-    max_count, best_product = 0, None
-    for (count, product) in rating:
-        if count > max_count:
-            max_count = count
-            best_product = product
-    return best_product
-
 
 def get_product_list(username, password, target_user):
     from instarecom.instagram.hashscrapper import InstaApi
@@ -130,14 +106,7 @@ def get_product_list(username, password, target_user):
     caption_list = nlp_captions(base_caption)
     caption_list = translate_hashtags(caption_list)
 
-    for caption in caption_list:
-        hashtags.append(caption)
-
-    print("size of hashtags: ", len(hashtags))
-
-    random.shuffle(hashtags)
-
-    products = getproductlist(hashtags)
+    products = getproductlist(hashtags, caption_list)
     print('Found', len(products), 'products')
 
     #products = improve_product_list(hashtags, products)
